@@ -1,0 +1,171 @@
+body {
+    background-image: url("./R (1).jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Local Time Clock */
+#clock {
+    height: 300px;
+    width: 300px;
+    background-color: #f5f5f5;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 8px solid #333;
+}
+
+#clock h1 {
+    margin: 0;
+    font-size: 48px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+#digitalclock {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#digitalclock h2 {
+    margin: 0;
+    color: #00ff00;
+    font-size: 32px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+/* City Clocks */
+.city-clock {
+    height: 220px;
+    width: 220px;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.35), inset 0 0 16px rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(3px);
+}
+
+.city-clock h3 {
+    margin: 0;
+    position: absolute;
+    top: 22px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.city-clock h3 span {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.city-clock p {
+    margin: 0;
+    font-size: 22px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1.8px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
+}
+
+#dubai-clock {
+    top: 30%;
+    left: 12%;
+    border: 6px solid #f0b429;
+    background: radial-gradient(circle at 30% 25%, rgba(255, 232, 179, 0.9), rgba(140, 88, 0, 0.88));
+}
+
+#dubai-clock .dubai-digital::before {
+    content: "DUBAI TIME";
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+#dubai-clock .dubai-digital::after {
+    content: "--:--:--";
+}
+
+#newyork-clock {
+    top: 30%;
+    right: 12%;
+    border: 6px solid #3fa7ff;
+    background: radial-gradient(circle at 30% 25%, rgba(183, 228, 255, 0.9), rgba(13, 67, 128, 0.9));
+}
+
+#newyork-clock .newyork-digital::before {
+    content: "NEW YORK TIME";
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+#newyork-clock .newyork-digital::after {
+    content: "--:--:--";
+}
+
+@media (max-width: 900px) {
+    #dubai-clock {
+        left: 4%;
+    }
+
+    #newyork-clock {
+        right: 4%;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        overflow-y: auto;
+    }
+
+    #clock {
+        top: 27%;
+    }
+
+    .city-clock {
+        height: 200px;
+        width: 200px;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin: 20px auto;
+    }
+
+    #dubai-clock,
+    #newyork-clock {
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+}
